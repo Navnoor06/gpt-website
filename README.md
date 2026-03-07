@@ -43,3 +43,45 @@ If you previously deployed with wrong settings, re-deploy after confirming Root 
 - Tailwind CSS
 - Wouter
 - Lucide React
+
+
+## How to add media to projects
+
+Edit `client/src/pages/Home.tsx` and replace the media placeholders inside each project card.
+
+### Option 1: Use local files (recommended)
+1. Put files in `client/public/projects/<project-name>/`
+2. Replace a placeholder with:
+
+```tsx
+<img
+  src="/projects/robotic-arm/image1.jpg"
+  alt="Robotic arm prototype"
+  className="w-full h-full object-cover rounded-lg"
+  loading="lazy"
+/>
+```
+
+### Option 2: Use YouTube
+
+```tsx
+<iframe
+  src="https://www.youtube.com/embed/VIDEO_ID"
+  title="Project video"
+  className="w-full h-full rounded-lg"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowFullScreen
+/>
+```
+
+### Option 3: Use Google Drive
+
+```tsx
+<img
+  src="https://drive.google.com/uc?export=view&id=YOUR_FILE_ID"
+  alt="Project media"
+  className="w-full h-full object-cover rounded-lg"
+/>
+```
+
+Tip: keep image names lowercase and use absolute paths starting with `/` for files in `public/`.

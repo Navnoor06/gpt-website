@@ -126,7 +126,7 @@ export default function Home() {
         <section className="py-20 sm:py-28">
           <p className="text-sm uppercase tracking-[0.2em] text-accent mb-4">Mechanical Engineering • University of Toronto</p>
           <h1 className="font-heading text-4xl sm:text-6xl font-semibold leading-tight max-w-4xl">
-            Building reliable mechanical and embedded systems.
+            Aspiring Robotics Engineer
           </h1>
           <p className="mt-6 text-base sm:text-lg max-w-3xl text-primary/80">
             Welcome to my portfolio. I enjoy bridging CAD, electronics, and embedded control to turn ideas into tested prototypes.
