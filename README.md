@@ -5,8 +5,8 @@ Production-ready React + Vite portfolio site that deploys cleanly on Vercel.
 ## Quick start
 
 ```bash
-pnpm install
-pnpm dev
+npm install
+npm run dev
 ```
 
 Open `http://localhost:3000`.
@@ -14,8 +14,8 @@ Open `http://localhost:3000`.
 ## Build for production
 
 ```bash
-pnpm build
-pnpm preview
+npm run build
+npm run preview
 ```
 
 ## Deploy to Vercel (important)
@@ -24,8 +24,8 @@ pnpm preview
 2. Import it in Vercel.
 3. Keep **Root Directory** as `.` (repo root).
 4. Vercel will use `vercel.json` automatically:
-   - `pnpm install --no-frozen-lockfile`
-   - `pnpm build`
+   - `npm install`
+   - `npm run build`
    - output directory `dist`
    - SPA rewrite to `/index.html` (prevents 404 on client-side routes)
 
