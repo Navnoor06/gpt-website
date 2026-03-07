@@ -10,7 +10,7 @@ type Project = {
   how: string[];
   results: string[];
   mediaPlaceholders: number;
-  media?: { src: string; alt: string }[];
+  media?: { sources: string[]; alt: string }[];
 };
 
 const projects: Project[] = [
@@ -33,9 +33,33 @@ const projects: Project[] = [
     ],
     mediaPlaceholders: 3,
     media: [
-      { src: "/projects/robotic-arm/cad-front.png", alt: "5 DOF robotic arm CAD front view" },
-      { src: "/projects/robotic-arm/cad-side.png", alt: "5 DOF robotic arm CAD side view" },
-      { src: "/projects/robotic-arm/prototype.jpg", alt: "5 DOF robotic arm physical prototype" },
+      {
+        sources: [
+          "/projects/robotic-arm/cad-front.png",
+          "/projects/robotic-arm/cad-front.jpg",
+          "/projects/robotic-arm/5-dof-robotic-arm-cad-front-view.png",
+          "/projects/robotic-arm/5-dof-robotic-arm-cad-front-view.jpg",
+        ],
+        alt: "5 DOF robotic arm CAD front view",
+      },
+      {
+        sources: [
+          "/projects/robotic-arm/cad-side.png",
+          "/projects/robotic-arm/cad-side.jpg",
+          "/projects/robotic-arm/5-dof-robotic-arm-cad-side-view.png",
+          "/projects/robotic-arm/5-dof-robotic-arm-cad-side-view.jpg",
+        ],
+        alt: "5 DOF robotic arm CAD side view",
+      },
+      {
+        sources: [
+          "/projects/robotic-arm/prototype.jpg",
+          "/projects/robotic-arm/prototype.png",
+          "/projects/robotic-arm/5-dof-robotic-arm-physical-prototype.jpg",
+          "/projects/robotic-arm/5-dof-robotic-arm-physical-prototype.png",
+        ],
+        alt: "5 DOF robotic arm physical prototype",
+      },
     ],
   },
   {
@@ -98,6 +122,25 @@ const projects: Project[] = [
     mediaPlaceholders: 3,
   },
 ];
+
+
+function ProjectMediaImage({ sources, alt }: { sources: string[]; alt: string }) {
+  const [index, setIndex] = useState(0);
+
+  return (
+    <img
+      src={sources[index]}
+      alt={alt}
+      loading="lazy"
+      onError={() => {
+        if (index < sources.length - 1) {
+          setIndex(index + 1);
+        }
+      }}
+      className="aspect-video w-full rounded-lg object-cover border border-primary/10 bg-primary/5"
+    />
+  );
+}
 
 const navItems = [
   { id: "projects", label: "Projects", href: "#projects" },
@@ -192,14 +235,8 @@ export default function Home() {
 
                       <div className="md:col-span-2 grid grid-cols-2 gap-3 content-start">
                         {project.media
-                          ? project.media.map((asset) => (
-                              <img
-                                key={asset.src}
-                                src={asset.src}
-                                alt={asset.alt}
-                                loading="lazy"
-                                className="aspect-video w-full rounded-lg object-cover border border-primary/10 bg-primary/5"
-                              />
+                          ? project.media.map((asset, idx) => (
+                              <ProjectMediaImage key={`${project.id}-media-${idx}`} sources={asset.sources} alt={asset.alt} />
                             ))
                           : Array.from({ length: project.mediaPlaceholders }).map((_, index) => (
                               <div
