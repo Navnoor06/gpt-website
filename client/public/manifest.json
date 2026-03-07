@@ -1,0 +1,8 @@
+{
+  "name": "Navnoor Mann Portfolio",
+  "short_name": "Navnoor Portfolio",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f8f9fa",
+  "theme_color": "#1a2332"
+}
