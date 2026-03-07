@@ -130,7 +130,7 @@ const projects: Project[] = [
 ];
 
 
-function ProjectMediaImage({ sources, alt }: { sources: string[]; alt: string }) {
+function ProjectMediaImage({ sources, alt, className }: { sources: string[]; alt: string; className?: string }) {
   const [index, setIndex] = useState(0);
 
   return (
@@ -139,12 +139,65 @@ function ProjectMediaImage({ sources, alt }: { sources: string[]; alt: string })
       alt={alt}
       loading="lazy"
       onError={() => {
-        if (index < sources.length - 1) {
-          setIndex(index + 1);
-        }
+        setIndex((current) => (current < sources.length - 1 ? current + 1 : current));
       }}
-      className="aspect-video w-full rounded-lg object-cover border border-primary/10 bg-primary/5"
+      className={className ?? "aspect-video w-full rounded-lg object-cover border border-primary/10 bg-primary/5"}
     />
+  );
+}
+
+function ProjectMediaCarousel({ items }: { items: { sources: string[]; alt: string }[] }) {
+  const [active, setActive] = useState(0);
+  const total = items.length;
+
+  const prev = () => setActive((index) => (index - 1 + total) % total);
+  const next = () => setActive((index) => (index + 1) % total);
+
+  return (
+    <div className="space-y-3">
+      <div className="relative">
+        <ProjectMediaImage
+          sources={items[active].sources}
+          alt={items[active].alt}
+          className="w-full aspect-[4/3] rounded-lg object-contain border border-primary/10 bg-primary/5"
+        />
+
+        {total > 1 && (
+          <>
+            <button
+              type="button"
+              onClick={prev}
+              className="absolute left-2 top-1/2 -translate-y-1/2 rounded-md bg-black/50 text-white px-2 py-1 text-xs hover:bg-black/65"
+              aria-label="Previous image"
+            >
+              Prev
+            </button>
+            <button
+              type="button"
+              onClick={next}
+              className="absolute right-2 top-1/2 -translate-y-1/2 rounded-md bg-black/50 text-white px-2 py-1 text-xs hover:bg-black/65"
+              aria-label="Next image"
+            >
+              Next
+            </button>
+          </>
+        )}
+      </div>
+
+      {total > 1 && (
+        <div className="flex items-center justify-center gap-2">
+          {items.map((item, index) => (
+            <button
+              key={item.alt}
+              type="button"
+              onClick={() => setActive(index)}
+              className={`h-2.5 w-2.5 rounded-full transition-colors ${index === active ? "bg-primary" : "bg-primary/30 hover:bg-primary/50"}`}
+              aria-label={`Go to image ${index + 1}`}
+            />
+          ))}
+        </div>
+      )}
+    </div>
   );
 }
 
@@ -239,12 +292,12 @@ export default function Home() {
                         </div>
                       </div>
 
-                      <div className="md:col-span-2 grid grid-cols-2 gap-3 content-start">
-                        {project.media
-                          ? project.media.map((asset, idx) => (
-                              <ProjectMediaImage key={`${project.id}-media-${idx}`} sources={asset.sources} alt={asset.alt} />
-                            ))
-                          : Array.from({ length: project.mediaPlaceholders }).map((_, index) => (
+                      <div className="md:col-span-2 content-start">
+                        {project.media ? (
+                          <ProjectMediaCarousel items={project.media} />
+                        ) : (
+                          <div className="grid grid-cols-2 gap-3">
+                            {Array.from({ length: project.mediaPlaceholders }).map((_, index) => (
                               <div
                                 key={`${project.id}-${index}`}
                                 className="aspect-video rounded-lg border border-dashed border-primary/30 bg-primary/5 text-xs text-primary/60 grid place-items-center p-2 text-center"
@@ -252,6 +305,8 @@ export default function Home() {
                                 Media slot {index + 1}
                               </div>
                             ))}
+                          </div>
+                        )}
                       </div>
                     </div>
                   )}
