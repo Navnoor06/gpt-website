@@ -2,6 +2,10 @@ import { ChevronDown, ChevronLeft, ChevronRight, Download, Mail, Linkedin, Exter
 import { useMemo, useState } from "react";
 import { Link } from "wouter";
 
+type MediaItem =
+  | { kind: "image"; sources: string[]; alt: string }
+  | { kind: "video"; embedUrl: string; alt: string };
+
 type Project = {
   id: string;
   title: string;
@@ -10,7 +14,7 @@ type Project = {
   how: string[];
   results: string[];
   mediaPlaceholders: number;
-  media?: { sources: string[]; alt: string }[];
+  media?: MediaItem[];
 };
 
 const projects: Project[] = [
@@ -42,6 +46,7 @@ const projects: Project[] = [
           "/projects/robotic-arm/5-dof-robotic-arm-cad-front-view.png",
           "/projects/robotic-arm/5-dof-robotic-arm-cad-front-view.jpg",
         ],
+        kind: "image",
         alt: "5 DOF robotic arm CAD front view",
       },
       {
@@ -53,6 +58,7 @@ const projects: Project[] = [
           "/projects/robotic-arm/5-dof-robotic-arm-cad-side-view.png",
           "/projects/robotic-arm/5-dof-robotic-arm-cad-side-view.jpg",
         ],
+        kind: "image",
         alt: "5 DOF robotic arm CAD side view",
       },
       {
@@ -64,6 +70,7 @@ const projects: Project[] = [
           "/projects/robotic-arm/5-dof-robotic-arm-physical-prototype.jpg",
           "/projects/robotic-arm/5-dof-robotic-arm-physical-prototype.png",
         ],
+        kind: "image",
         alt: "5 DOF robotic arm physical prototype",
       },
     ],
@@ -94,6 +101,7 @@ const projects: Project[] = [
           "/projects/power-board/schematic.png",
           "/projects/power-board/schematic.jpg",
         ],
+        kind: "image",
         alt: "UTSM power distribution schematic",
       },
       {
@@ -103,6 +111,7 @@ const projects: Project[] = [
           "/projects/power-board/pcb-layout.png",
           "/projects/power-board/pcb-layout.jpg",
         ],
+        kind: "image",
         alt: "UTSM power distribution PCB layout",
       },
     ],
@@ -126,6 +135,23 @@ const projects: Project[] = [
       "Verified circuit operation through operation",
     ],
     mediaPlaceholders: 2,
+    media: [
+      {
+        kind: "video",
+        embedUrl: "https://drive.google.com/file/d/1k9khkHatQgjzLSEl28Dez4T3W6sVZbpn/preview",
+        alt: "555 timer demonstration video",
+      },
+      {
+        kind: "image",
+        sources: [
+          "/projects/555-timer/circuit-diagram.png",
+          "/projects/555-timer/circuit-diagram.jpg",
+          "/projects/555-timer/pcb-layout.png",
+          "/projects/555-timer/pcb-layout.jpg",
+        ],
+        alt: "555 timer circuit and PCB design",
+      },
+    ],
   },
   {
     id: "autonomous-robot",
@@ -146,6 +172,13 @@ const projects: Project[] = [
       "Demonstrated stable autonomous navigation in enclosed environments",
     ],
     mediaPlaceholders: 3,
+    media: [
+      {
+        kind: "video",
+        embedUrl: "https://drive.google.com/file/d/13KdH3_PVrl_RmujiJlfK8Ztcdw-RjdWw/preview",
+        alt: "Autonomous robot obstacle detection video",
+      },
+    ],
   },
 ];
 
@@ -166,7 +199,7 @@ function ProjectMediaImage({ sources, alt, className }: { sources: string[]; alt
   );
 }
 
-function ProjectMediaCarousel({ items }: { items: { sources: string[]; alt: string }[] }) {
+function ProjectMediaCarousel({ items }: { items: MediaItem[] }) {
   const [active, setActive] = useState(0);
   const total = items.length;
 
@@ -176,11 +209,23 @@ function ProjectMediaCarousel({ items }: { items: { sources: string[]; alt: stri
   return (
     <div className="space-y-3">
       <div className="relative">
-        <ProjectMediaImage
-          sources={items[active].sources}
-          alt={items[active].alt}
-          className="w-full aspect-[4/3] rounded-lg object-contain border border-primary/10 bg-primary/5 animate-[slideIn_.35s_ease]"
-        />
+        <div key={active} className="animate-[slideIn_.35s_ease]">
+          {items[active].kind === "video" ? (
+            <iframe
+              src={items[active].embedUrl}
+              title={items[active].alt}
+              allow="autoplay"
+              allowFullScreen
+              className="w-full aspect-[4/3] rounded-lg border border-primary/10 bg-primary/5"
+            />
+          ) : (
+            <ProjectMediaImage
+              sources={items[active].sources}
+              alt={items[active].alt}
+              className="w-full aspect-[4/3] rounded-lg object-contain border border-primary/10 bg-primary/5"
+            />
+          )}
+        </div>
 
         {total > 1 && (
           <>
