@@ -10,6 +10,7 @@ type Project = {
   how: string[];
   results: string[];
   mediaPlaceholders: number;
+  media?: { src: string; alt: string }[];
 };
 
 const projects: Project[] = [
@@ -31,6 +32,11 @@ const projects: Project[] = [
       "Successfully lifted and controlled 50g payloads during testing",
     ],
     mediaPlaceholders: 3,
+    media: [
+      { src: "/projects/robotic-arm/cad-front.png", alt: "5 DOF robotic arm CAD front view" },
+      { src: "/projects/robotic-arm/cad-side.png", alt: "5 DOF robotic arm CAD side view" },
+      { src: "/projects/robotic-arm/prototype.jpg", alt: "5 DOF robotic arm physical prototype" },
+    ],
   },
   {
     id: "power-board",
@@ -185,14 +191,24 @@ export default function Home() {
                       </div>
 
                       <div className="md:col-span-2 grid grid-cols-2 gap-3 content-start">
-                        {Array.from({ length: project.mediaPlaceholders }).map((_, index) => (
-                          <div
-                            key={`${project.id}-${index}`}
-                            className="aspect-video rounded-lg border border-dashed border-primary/30 bg-primary/5 text-xs text-primary/60 grid place-items-center p-2 text-center"
-                          >
-                            Media slot {index + 1}
-                          </div>
-                        ))}
+                        {project.media
+                          ? project.media.map((asset) => (
+                              <img
+                                key={asset.src}
+                                src={asset.src}
+                                alt={asset.alt}
+                                loading="lazy"
+                                className="aspect-video w-full rounded-lg object-cover border border-primary/10 bg-primary/5"
+                              />
+                            ))
+                          : Array.from({ length: project.mediaPlaceholders }).map((_, index) => (
+                              <div
+                                key={`${project.id}-${index}`}
+                                className="aspect-video rounded-lg border border-dashed border-primary/30 bg-primary/5 text-xs text-primary/60 grid place-items-center p-2 text-center"
+                              >
+                                Media slot {index + 1}
+                              </div>
+                            ))}
                       </div>
                     </div>
                   )}
