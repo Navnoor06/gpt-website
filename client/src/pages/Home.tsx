@@ -1,4 +1,4 @@
-import { ChevronDown, Download, Mail, Linkedin, ExternalLink } from "lucide-react";
+import { ChevronDown, ChevronLeft, ChevronRight, Download, Mail, Linkedin, ExternalLink } from "lucide-react";
 import { useMemo, useState } from "react";
 import { Link } from "wouter";
 
@@ -86,6 +86,26 @@ const projects: Project[] = [
       "Improved electrical reliability and serviceability during testing",
     ],
     mediaPlaceholders: 2,
+    media: [
+      {
+        sources: [
+          "https://drive.google.com/uc?export=view&id=1jdF6-37Vqhx6e5XTrajGzqkC8XO8dU8-",
+          "https://drive.google.com/thumbnail?id=1jdF6-37Vqhx6e5XTrajGzqkC8XO8dU8-&sz=w1600",
+          "/projects/power-board/schematic.png",
+          "/projects/power-board/schematic.jpg",
+        ],
+        alt: "UTSM power distribution schematic",
+      },
+      {
+        sources: [
+          "https://drive.google.com/uc?export=view&id=1gXNPg_t120oayDz4y8Cb8dlmNXrkEzb_",
+          "https://drive.google.com/thumbnail?id=1gXNPg_t120oayDz4y8Cb8dlmNXrkEzb_&sz=w1600",
+          "/projects/power-board/pcb-layout.png",
+          "/projects/power-board/pcb-layout.jpg",
+        ],
+        alt: "UTSM power distribution PCB layout",
+      },
+    ],
   },
   {
     id: "555-timer",
@@ -159,7 +179,7 @@ function ProjectMediaCarousel({ items }: { items: { sources: string[]; alt: stri
         <ProjectMediaImage
           sources={items[active].sources}
           alt={items[active].alt}
-          className="w-full aspect-[4/3] rounded-lg object-contain border border-primary/10 bg-primary/5"
+          className="w-full aspect-[4/3] rounded-lg object-contain border border-primary/10 bg-primary/5 animate-[slideIn_.35s_ease]"
         />
 
         {total > 1 && (
@@ -167,18 +187,18 @@ function ProjectMediaCarousel({ items }: { items: { sources: string[]; alt: stri
             <button
               type="button"
               onClick={prev}
-              className="absolute left-2 top-1/2 -translate-y-1/2 rounded-md bg-black/50 text-white px-2 py-1 text-xs hover:bg-black/65"
+              className="absolute left-2 top-1/2 -translate-y-1/2 rounded-md bg-black/50 text-white p-1.5 hover:bg-black/65"
               aria-label="Previous image"
             >
-              Prev
+              <ChevronLeft size={16} />
             </button>
             <button
               type="button"
               onClick={next}
-              className="absolute right-2 top-1/2 -translate-y-1/2 rounded-md bg-black/50 text-white px-2 py-1 text-xs hover:bg-black/65"
+              className="absolute right-2 top-1/2 -translate-y-1/2 rounded-md bg-black/50 text-white p-1.5 hover:bg-black/65"
               aria-label="Next image"
             >
-              Next
+              <ChevronRight size={16} />
             </button>
           </>
         )}
