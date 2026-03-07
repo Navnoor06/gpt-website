@@ -174,9 +174,19 @@ const projects: Project[] = [
     mediaPlaceholders: 3,
     media: [
       {
+        kind: "image",
+        sources: [
+          "https://drive.google.com/uc?export=view&id=1jMBwlCyg8kh21G9dBmWG6Kj47wOPRJeR",
+          "https://drive.google.com/thumbnail?id=1jMBwlCyg8kh21G9dBmWG6Kj47wOPRJeR&sz=w1600",
+          "/projects/autonomous-robot/robot-photo.jpg",
+          "/projects/autonomous-robot/robot-photo.png",
+        ],
+        alt: "Autonomous robot build photo",
+      },
+      {
         kind: "video",
-        embedUrl: "https://drive.google.com/file/d/13KdH3_PVrl_RmujiJlfK8Ztcdw-RjdWw/preview",
-        alt: "Autonomous robot obstacle detection video",
+        embedUrl: "https://drive.google.com/file/d/1jU4kcspgngOXiZSoBx635wFKBYFriwSU/preview",
+        alt: "Autonomous robot demo video",
       },
     ],
   },

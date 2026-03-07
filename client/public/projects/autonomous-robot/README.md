@@ -1,3 +1,7 @@
-Autonomous robot media is wired in `client/src/pages/Home.tsx` with a Google Drive video embed.
+Autonomous robot media is wired in `client/src/pages/Home.tsx` using:
+- Google Drive image
+- Google Drive video preview
 
-Optional local fallback media can be added later as needed.
+Optional local fallback image filenames:
+- robot-photo.jpg
+- robot-photo.png
