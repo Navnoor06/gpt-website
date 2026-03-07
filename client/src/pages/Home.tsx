@@ -129,7 +129,7 @@ export default function Home() {
             Aspiring Robotics Engineer
           </h1>
           <p className="mt-6 text-base sm:text-lg max-w-3xl text-primary/80">
-            Welcome to my portfolio. I enjoy bridging CAD, electronics, and embedded control to turn ideas into tested prototypes.
+            Welcome to my portfolio. I design and prototype systems that combine mechanical design, electronics, and embedded control, from robotic arms and PCBs to microcontroller-based devices.
           </p>
         </section>
 

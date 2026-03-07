@@ -22,17 +22,16 @@ export default function About() {
             <h1 className="font-heading text-5xl font-semibold mb-8">About Me</h1>
             <div className="space-y-8 text-primary/80 text-[2rem] leading-[1.6]">
               <p className="text-xl leading-relaxed">
-                I&apos;m a Mechanical Engineering student at UofT with a passion for bringing ideas to life through design and fabrication. My
-                expertise spans mechanical design, PCB design, embedded systems programming, and robotics.
+                I&apos;m a Mechanical Engineering student at the University of Toronto with a strong interest in robotics, mechatronics, and hardware systems. I enjoy taking ideas from concept to working prototypes by combining mechanical design, electronics, and embedded programming.
               </p>
               <p className="text-xl leading-relaxed">
-                In my free time, I love building personal projects like my 5 DOF robotic arm. These projects have taught me the importance of
-                precision, problem-solving, and iterative design. I&apos;m particularly drawn to the intersection of mechanical and electrical
-                systems, where I can leverage both hardware and software to build practical solutions.
+                Many of my projects focus on building complete systems from the ground up. This includes designing mechanical components in CAD, developing custom PCBs, programming microcontrollers, and integrating sensors and actuators into functional robotic systems.
               </p>
               <p className="text-xl leading-relaxed">
-                I&apos;m excited to enter robotics and hardware systems integration, where I can contribute to meaningful projects and keep growing as
-                an engineer.
+                One of my favorite projects has been developing a 5-DOF robotic arm, where I worked through challenges in mechanical design, motor control, and system integration. Projects like this have taught me the importance of iterative design, debugging hardware, and testing real systems.
+              </p>
+              <p className="text-xl leading-relaxed">
+                I&apos;m particularly interested in robotics and hardware development roles where I can work on electromechanical systems, embedded devices, and robotic platforms, and continue growing as a hands-on engineer.
               </p>
             </div>
           </div>
