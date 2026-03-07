@@ -35,6 +35,8 @@ const projects: Project[] = [
     media: [
       {
         sources: [
+          "https://drive.google.com/uc?export=view&id=1EyvhkpLzJ8IkDf5e_XD_dQyYo6qz8fpJ",
+          "https://drive.google.com/thumbnail?id=1EyvhkpLzJ8IkDf5e_XD_dQyYo6qz8fpJ&sz=w1600",
           "/projects/robotic-arm/cad-front.png",
           "/projects/robotic-arm/cad-front.jpg",
           "/projects/robotic-arm/5-dof-robotic-arm-cad-front-view.png",
@@ -44,6 +46,8 @@ const projects: Project[] = [
       },
       {
         sources: [
+          "https://drive.google.com/uc?export=view&id=1frtt42aoPywGIPX23VnsBuRhUsDr9we0",
+          "https://drive.google.com/thumbnail?id=1frtt42aoPywGIPX23VnsBuRhUsDr9we0&sz=w1600",
           "/projects/robotic-arm/cad-side.png",
           "/projects/robotic-arm/cad-side.jpg",
           "/projects/robotic-arm/5-dof-robotic-arm-cad-side-view.png",
@@ -53,6 +57,8 @@ const projects: Project[] = [
       },
       {
         sources: [
+          "https://drive.google.com/uc?export=view&id=1Glqp5rGb6DzaIawWefK_h6crq2d58am3",
+          "https://drive.google.com/thumbnail?id=1Glqp5rGb6DzaIawWefK_h6crq2d58am3&sz=w1600",
           "/projects/robotic-arm/prototype.jpg",
           "/projects/robotic-arm/prototype.png",
           "/projects/robotic-arm/5-dof-robotic-arm-physical-prototype.jpg",
