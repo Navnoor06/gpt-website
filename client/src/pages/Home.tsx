@@ -15,6 +15,7 @@ type Project = {
   results: string[];
   mediaPlaceholders: number;
   media?: MediaItem[];
+  repoLink?: string;
 };
 
 const projects: Project[] = [
@@ -152,6 +153,39 @@ const projects: Project[] = [
         alt: "555 timer circuit and PCB design",
       },
     ],
+  },
+  {
+    id: "uart-fifo",
+    title: "UART Communication System with FIFO",
+    category: "Digital Design & Hardware Systems",
+    what: [
+      "Design and implement a UART communication system in Verilog",
+      "Enable reliable serial data transmission between devices",
+    ],
+    how: [
+      "Implemented UART transmitter and receiver modules using finite state machines in Verilog RTL",
+      "Integrated a synchronous FIFO buffer to support multi-byte data transfers",
+      "Built a verification testbench to simulate transmission and validate received data",
+      "Used GTKWave to analyze simulation waveforms and debug serial bit timing",
+    ],
+    results: [
+      "Successfully transmitted and reconstructed bytes through the UART protocol",
+      "Verified correct start bit, data bits, and stop bit framing through waveform analysis",
+    ],
+    mediaPlaceholders: 1,
+    media: [
+      {
+        kind: "image",
+        sources: [
+          "https://drive.google.com/uc?export=view&id=15JqEgczblbghd6WyWQRkZLzdLWv5Pxcp",
+          "https://drive.google.com/thumbnail?id=15JqEgczblbghd6WyWQRkZLzdLWv5Pxcp&sz=w1600",
+          "/projects/uart-fifo/gtkwave.png",
+          "/projects/uart-fifo/gtkwave.jpg",
+        ],
+        alt: "UART FIFO GTKWave simulation output",
+      },
+    ],
+    repoLink: "https://github.com/Navnoor06/UART.git",
   },
   {
     id: "autonomous-robot",
@@ -365,6 +399,19 @@ export default function Home() {
                             ))}
                           </ul>
                         </div>
+                        {project.repoLink && (
+                          <div>
+                            <h4 className="font-semibold mb-2">Repository</h4>
+                            <a
+                              href={project.repoLink}
+                              target="_blank"
+                              rel="noreferrer"
+                              className="inline-flex items-center gap-2 text-accent hover:underline"
+                            >
+                              View project on GitHub <ExternalLink size={14} />
+                            </a>
+                          </div>
+                        )}
                       </div>
 
                       <div className="md:col-span-2 content-start">
@@ -406,7 +453,7 @@ export default function Home() {
             >
               <Linkedin size={16} /> LinkedIn
             </a>
-            <a className="inline-flex items-center gap-2 rounded-md border border-primary/20 px-4 py-2 hover:border-accent hover:text-accent" href="#" target="_blank" rel="noreferrer">
+            <a className="inline-flex items-center gap-2 rounded-md border border-primary/20 px-4 py-2 hover:border-accent hover:text-accent" href="https://drive.google.com/file/d/1FkRRHT9ua9YwYV7k-0KazUfKQRhTzHPa/view?usp=sharing" target="_blank" rel="noreferrer">
               <Download size={16} /> Resume
             </a>
             <a className="inline-flex items-center gap-2 rounded-md border border-primary/20 px-4 py-2 hover:border-accent hover:text-accent" href="#projects">
