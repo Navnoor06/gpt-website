@@ -1,6 +1,6 @@
 # Navnoor Mann Portfolio Website
 
-Production-ready React + Vite portfolio site that can be deployed directly to Vercel.
+Production-ready React + Vite portfolio site that deploys cleanly on Vercel.
 
 ## Quick start
 
@@ -18,20 +18,20 @@ pnpm build
 pnpm preview
 ```
 
-## Deploy to Vercel
+## Deploy to Vercel (important)
 
 1. Push this repo to GitHub.
-2. Import the repo in Vercel.
-3. Use:
-   - Build command: `pnpm build`
-   - Output directory: `dist`
-4. Deploy.
+2. Import it in Vercel.
+3. Keep **Root Directory** as `.` (repo root).
+4. Vercel will use `vercel.json` automatically:
+   - `pnpm install --no-frozen-lockfile`
+   - `pnpm build`
+   - output directory `dist`
+   - SPA rewrite to `/index.html` (prevents 404 on client-side routes)
 
-`vercel.json` is included to keep these settings explicit.
+If you previously deployed with wrong settings, re-deploy after confirming Root Directory and build/output values above.
 
 ## Edit content
-
-Primary content is in:
 
 - `client/src/pages/Home.tsx` (hero, projects, contact)
 - `client/src/index.css` (global styles, fonts)
