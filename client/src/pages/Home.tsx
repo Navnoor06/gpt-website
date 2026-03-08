@@ -324,6 +324,7 @@ const navItems = [
 
 export default function Home() {
   const [expanded, setExpanded] = useState<string | null>(projects[0].id);
+  const [copiedEmail, setCopiedEmail] = useState(false);
   const year = useMemo(() => new Date().getFullYear(), []);
 
   return (
@@ -449,9 +450,22 @@ export default function Home() {
           <h2 className="font-heading text-3xl mb-4">Contact</h2>
           <p className="text-primary/80 max-w-2xl mb-6">If you&apos;d like to collaborate or discuss internship opportunities, I&apos;d love to connect.</p>
           <div className="flex flex-wrap gap-3">
-            <a className="inline-flex items-center gap-2 rounded-md bg-primary text-white px-4 py-2 hover:bg-primary/90" href="mailto:navnoormann06@gmail.com">
-              <Mail size={16} /> Email
-            </a>
+            <button
+              type="button"
+              className="inline-flex items-center gap-2 rounded-md bg-primary text-white px-4 py-2 hover:bg-primary/90"
+              onClick={async () => {
+                try {
+                  await navigator.clipboard.writeText("navnoormannalt@gmail.com");
+                  setCopiedEmail(true);
+                  setTimeout(() => setCopiedEmail(false), 1800);
+                } catch {
+                  // Fallback for environments where clipboard API is unavailable
+                  window.prompt("Copy email:", "navnoormannalt@gmail.com");
+                }
+              }}
+            >
+              <Mail size={16} /> {copiedEmail ? "Copied!" : "navnoormannalt@gmail.com"}
+            </button>
             <a
               className="inline-flex items-center gap-2 rounded-md border border-primary/20 px-4 py-2 hover:border-accent hover:text-accent"
               href="https://linkedin.com/in/navnoormann"
