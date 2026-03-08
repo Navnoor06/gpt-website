@@ -1,4 +1,4 @@
-555 Timer media is wired in `client/src/pages/Home.tsx` with a Google Drive video embed.
+555 Timer media is wired in `client/src/pages/Home.tsx` with Google Drive embeds/assets.
 
 Optional local fallback images:
 - circuit-diagram.png (or .jpg)

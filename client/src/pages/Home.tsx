@@ -145,12 +145,19 @@ const projects: Project[] = [
       {
         kind: "image",
         sources: [
+          "https://drive.google.com/uc?export=view&id=19S1GiPpF9Kf6zaPFjlOMH-k4kI23ELBh",
+          "https://drive.google.com/thumbnail?id=19S1GiPpF9Kf6zaPFjlOMH-k4kI23ELBh&sz=w1600",
           "/projects/555-timer/circuit-diagram.png",
           "/projects/555-timer/circuit-diagram.jpg",
           "/projects/555-timer/pcb-layout.png",
           "/projects/555-timer/pcb-layout.jpg",
         ],
         alt: "555 timer circuit and PCB design",
+      },
+      {
+        kind: "video",
+        embedUrl: "https://drive.google.com/file/d/13KdH3_PVrl_RmujiJlfK8Ztcdw-RjdWw/preview",
+        alt: "555 timer operation video",
       },
     ],
   },
@@ -346,7 +353,7 @@ export default function Home() {
             Aspiring Robotics Engineer
           </h1>
           <p className="mt-6 text-base sm:text-lg max-w-3xl text-primary/80">
-            Welcome to my portfolio. I design and prototype systems that combine mechanical design, electronics, and embedded control, from robotic arms and PCBs to microcontroller-based devices.
+            Welcome to my portfolio. I design and prototype integrated hardware systems that combine mechanical design, electronics, and embedded control, with projects ranging from robotic arms and custom PCBs to microcontroller-based devices.
           </p>
         </section>
 
