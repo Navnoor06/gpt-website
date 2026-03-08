@@ -464,7 +464,7 @@ export default function Home() {
                 }
               }}
             >
-              <Mail size={16} /> {copiedEmail ? "Copied!" : "navnoormannalt@gmail.com"}
+              <Mail size={16} /> {copiedEmail ? "Copied!" : "Email"}
             </button>
             <a
               className="inline-flex items-center gap-2 rounded-md border border-primary/20 px-4 py-2 hover:border-accent hover:text-accent"
