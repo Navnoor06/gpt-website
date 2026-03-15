@@ -40,6 +40,28 @@ const projects: Project[] = [
     media: [
       {
         sources: [
+          "https://drive.google.com/uc?export=view&id=1Glqp5rGb6DzaIawWefK_h6crq2d58am3",
+          "https://drive.google.com/thumbnail?id=1Glqp5rGb6DzaIawWefK_h6crq2d58am3&sz=w1600",
+          "/projects/robotic-arm/prototype.jpg",
+          "/projects/robotic-arm/prototype.png",
+          "/projects/robotic-arm/5-dof-robotic-arm-physical-prototype.jpg",
+          "/projects/robotic-arm/5-dof-robotic-arm-physical-prototype.png",
+        ],
+        kind: "image",
+        alt: "5 DOF robotic arm physical prototype",
+      },
+      {
+        kind: "video",
+        embedUrl: "https://drive.google.com/file/d/178Ycm_JIrRgk3-Cnj13F7AksPdRt4yFx/preview",
+        alt: "5 DOF robotic arm demo video 1",
+      },
+      {
+        kind: "video",
+        embedUrl: "https://drive.google.com/file/d/1cu4kIlJB6S-cY-XwkuITMxrr0ybC6Apv/preview",
+        alt: "5 DOF robotic arm demo video 2",
+      },
+      {
+        sources: [
           "https://drive.google.com/uc?export=view&id=1EyvhkpLzJ8IkDf5e_XD_dQyYo6qz8fpJ",
           "https://drive.google.com/thumbnail?id=1EyvhkpLzJ8IkDf5e_XD_dQyYo6qz8fpJ&sz=w1600",
           "/projects/robotic-arm/cad-front.png",
@@ -61,18 +83,6 @@ const projects: Project[] = [
         ],
         kind: "image",
         alt: "5 DOF robotic arm CAD side view",
-      },
-      {
-        sources: [
-          "https://drive.google.com/uc?export=view&id=1Glqp5rGb6DzaIawWefK_h6crq2d58am3",
-          "https://drive.google.com/thumbnail?id=1Glqp5rGb6DzaIawWefK_h6crq2d58am3&sz=w1600",
-          "/projects/robotic-arm/prototype.jpg",
-          "/projects/robotic-arm/prototype.png",
-          "/projects/robotic-arm/5-dof-robotic-arm-physical-prototype.jpg",
-          "/projects/robotic-arm/5-dof-robotic-arm-physical-prototype.png",
-        ],
-        kind: "image",
-        alt: "5 DOF robotic arm physical prototype",
       },
     ],
   },
