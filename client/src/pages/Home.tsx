@@ -359,13 +359,22 @@ export default function Home() {
 
       <main id="home" className="mx-auto max-w-6xl px-4 sm:px-6">
         <section className="py-20 sm:py-28">
-          <p className="text-sm uppercase tracking-[0.2em] text-accent mb-4">Mechanical Engineering • University of Toronto</p>
-          <h1 className="font-heading text-4xl sm:text-6xl font-semibold leading-tight max-w-4xl">
-            Aspiring Robotics Engineer
-          </h1>
-          <p className="mt-6 text-base sm:text-lg max-w-3xl text-primary/80">
-            Welcome to my portfolio. I design and prototype integrated hardware systems that combine mechanical design, electronics, and embedded control, with projects ranging from robotic arms and custom PCBs to microcontroller-based devices.
-          </p>
+          <div className="grid gap-8 md:grid-cols-[minmax(0,1fr)_300px] items-start">
+            <div>
+              <p className="text-sm uppercase tracking-[0.2em] text-accent mb-4">Mechanical Engineering • University of Toronto</p>
+              <h1 className="font-heading text-4xl sm:text-6xl font-semibold leading-tight max-w-4xl">
+                Aspiring Robotics Engineer
+              </h1>
+              <p className="mt-6 text-base sm:text-lg max-w-3xl text-primary/80">
+                Welcome to my portfolio. I design and prototype integrated hardware systems that combine mechanical design, electronics, and embedded control, with projects ranging from robotic arms and custom PCBs to microcontroller-based devices.
+              </p>
+            </div>
+            <img
+              src="https://drive.google.com/thumbnail?id=1qnxaQBslWYgDPlkuPz5zkwRWETjLl4hj&sz=w1000"
+              alt="Portrait of Navnoor Mann"
+              className="w-full max-w-[300px] justify-self-center rounded-2xl border border-primary/15 bg-primary/5 object-cover aspect-square"
+            />
+          </div>
         </section>
 
         <section id="projects" className="py-12 scroll-mt-24">
