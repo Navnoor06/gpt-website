@@ -19,14 +19,7 @@ export default function About() {
       <main className="mx-auto max-w-6xl px-4 sm:px-6 py-16">
         <section className="grid lg:grid-cols-2 gap-10 items-start">
           <div>
-            <div className="mb-8 grid gap-6 sm:grid-cols-[minmax(0,1fr)_220px] items-start">
-              <h1 className="font-heading text-5xl font-semibold">About Me</h1>
-              <img
-                src="https://drive.google.com/thumbnail?id=1qnxaQBslWYgDPlkuPz5zkwRWETjLl4hj&sz=w1000"
-                alt="Portrait of Navnoor Mann"
-                className="w-full max-w-[220px] justify-self-start sm:justify-self-end rounded-2xl border border-primary/15 bg-primary/5 object-cover aspect-square"
-              />
-            </div>
+            <h1 className="font-heading text-5xl font-semibold mb-8">About Me</h1>
             <div className="space-y-8 text-primary/80 text-[2rem] leading-[1.6]">
               <p className="text-xl leading-relaxed">
                 I&apos;m a Mechanical Engineering student at the University of Toronto with a strong interest in robotics, mechatronics, and hardware systems. I enjoy taking ideas from concept to working prototypes by combining mechanical design, electronics, and embedded programming.
@@ -43,27 +36,37 @@ export default function About() {
             </div>
           </div>
 
-          <aside className="rounded-2xl border border-primary/15 bg-white/80 p-8 lg:mt-4">
-            <h2 className="font-heading text-3xl mb-6">Skills & Expertise</h2>
-            <div className="space-y-5 text-primary/85">
-              <div>
-                <h3 className="font-semibold text-2xl">Mechanical Design</h3>
-                <p className="text-xl">SolidWorks, 3D Printing, CAD Modeling</p>
-              </div>
-              <div>
-                <h3 className="font-semibold text-2xl">PCB Design</h3>
-                <p className="text-xl">KiCad, Altium 365, Circuit Design</p>
-              </div>
-              <div>
-                <h3 className="font-semibold text-2xl">Embedded Systems</h3>
-                <p className="text-xl">Arduino, ESP32, C++, Microcontroller Programming</p>
-              </div>
-              <div>
-                <h3 className="font-semibold text-2xl">Robotics</h3>
-                <p className="text-xl">Robot Design, Sensor Integration, Motion Control</p>
-              </div>
+          <div className="space-y-6 lg:mt-4">
+            <div className="rounded-2xl border border-primary/15 bg-white/80 p-8">
+              <img
+                src="https://drive.google.com/thumbnail?id=1qnxaQBslWYgDPlkuPz5zkwRWETjLl4hj&sz=w1000"
+                alt="Portrait of Navnoor Mann"
+                className="w-full rounded-xl object-cover aspect-square"
+              />
             </div>
-          </aside>
+
+            <aside className="rounded-2xl border border-primary/15 bg-white/80 p-8">
+              <h2 className="font-heading text-3xl mb-6">Skills & Expertise</h2>
+              <div className="space-y-5 text-primary/85">
+                <div>
+                  <h3 className="font-semibold text-2xl">Mechanical Design</h3>
+                  <p className="text-xl">SolidWorks, 3D Printing, CAD Modeling</p>
+                </div>
+                <div>
+                  <h3 className="font-semibold text-2xl">PCB Design</h3>
+                  <p className="text-xl">KiCad, Altium 365, Circuit Design</p>
+                </div>
+                <div>
+                  <h3 className="font-semibold text-2xl">Embedded Systems</h3>
+                  <p className="text-xl">Arduino, ESP32, C++, Microcontroller Programming</p>
+                </div>
+                <div>
+                  <h3 className="font-semibold text-2xl">Robotics</h3>
+                  <p className="text-xl">Robot Design, Sensor Integration, Motion Control</p>
+                </div>
+              </div>
+            </aside>
+          </div>
         </section>
       </main>
     </div>
