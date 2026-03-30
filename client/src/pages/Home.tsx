@@ -493,7 +493,7 @@ export default function Home() {
             >
               <Linkedin size={16} /> LinkedIn
             </a>
-            <a className="inline-flex items-center gap-2 rounded-md border border-primary/20 px-4 py-2 hover:border-accent hover:text-accent" href="https://drive.google.com/file/d/1FkRRHT9ua9YwYV7k-0KazUfKQRhTzHPa/view?usp=sharing" target="_blank" rel="noreferrer">
+            <a className="inline-flex items-center gap-2 rounded-md border border-primary/20 px-4 py-2 hover:border-accent hover:text-accent" href="https://drive.google.com/file/d/1FpBg9WY3G7PIsuY7LbhGETQywdBARnGJ/view?usp=sharing" target="_blank" rel="noreferrer">
               <Download size={16} /> Resume
             </a>
             <a className="inline-flex items-center gap-2 rounded-md border border-primary/20 px-4 py-2 hover:border-accent hover:text-accent" href="#projects">
