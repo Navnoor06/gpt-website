@@ -95,8 +95,8 @@ const projects: Project[] = [
       "Maintain dimensional tolerances to ensure proper fit and motion of rotating components",
     ],
     how: [
-      "Manufactured precise components using a lathe, mill, and drill press while following technical drawings and tolerances",
-      "Assembled the compressed air engine and verified fit, alignment, and sealing between moving components",
+      "Manufactured precise components using a lathe, mill and drill press while following technical drawings and tolerances",
+      "Assembled a functional compressed air engine, ensuring proper fit, alignment and sealing between moving components",
       "Iteratively adjusted dimensions to improve rotational motion and mechanical efficiency",
     ],
     results: [
