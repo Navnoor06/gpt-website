@@ -87,6 +87,56 @@ const projects: Project[] = [
     ],
   },
   {
+    id: "compressed-air-engine",
+    title: "Compressed Air Engine",
+    category: "Precision Manufacturing & Mechanical Assembly",
+    what: [
+      "Machine and build a functional compressed air engine from technical drawings",
+      "Maintain dimensional tolerances to ensure proper fit and motion of rotating components",
+    ],
+    how: [
+      "Manufactured precise components using a lathe, mill, and drill press while following technical drawings and tolerances",
+      "Assembled the compressed air engine and verified fit, alignment, and sealing between moving components",
+      "Iteratively adjusted dimensions to improve rotational motion and mechanical efficiency",
+    ],
+    results: [
+      "Built a functional compressed air engine with smooth rotational operation",
+      "Improved mechanical efficiency through iterative machining and assembly refinements",
+    ],
+    mediaPlaceholders: 4,
+    media: [
+      {
+        kind: "image",
+        sources: [
+          "https://drive.google.com/uc?export=view&id=1Yw3-U6i6P0bKPMYIMny4gMMcX83SaEv3",
+          "https://drive.google.com/thumbnail?id=1Yw3-U6i6P0bKPMYIMny4gMMcX83SaEv3&sz=w1600",
+        ],
+        alt: "Compressed air engine component fabrication",
+      },
+      {
+        kind: "image",
+        sources: [
+          "https://drive.google.com/uc?export=view&id=1QDzWqmweixE10iRJXQCtvvhSUKtZKWrk",
+          "https://drive.google.com/thumbnail?id=1QDzWqmweixE10iRJXQCtvvhSUKtZKWrk&sz=w1600",
+        ],
+        alt: "Compressed air engine assembly process",
+      },
+      {
+        kind: "image",
+        sources: [
+          "https://drive.google.com/uc?export=view&id=1-0sZ_XF7fV0D-VLzPmc5VM127N_k4LRn",
+          "https://drive.google.com/thumbnail?id=1-0sZ_XF7fV0D-VLzPmc5VM127N_k4LRn&sz=w1600",
+        ],
+        alt: "Completed compressed air engine",
+      },
+      {
+        kind: "video",
+        embedUrl: "https://drive.google.com/file/d/1uppkNyYcHzZLKaxiwhbgGazLGthFAuEg/preview",
+        alt: "Compressed air engine operation demo",
+      },
+    ],
+  },
+  {
     id: "power-board",
     title: "Power Distribution Board - UTSM Club",
     category: "PCB Design & Systems Integration",
