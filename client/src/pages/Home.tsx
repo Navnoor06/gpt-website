@@ -20,6 +20,56 @@ type Project = {
 
 const projects: Project[] = [
   {
+    id: "relumi-expressive-robot",
+    title: "ReLumi Expressive Robot",
+    category: "ESP32, Embedded Systems (MakeUOFT Hackathon)",
+    what: [
+      "Build an autonomous robotic companion that translates user and vision inputs into expressive motion and behavior",
+      "Develop a complete embedded interaction system during the 24 hour MakeUOFT hackathon",
+    ],
+    how: [
+      "Coordinated vision inputs with control logic to trigger Gemini API responses and drive autonomous behavior",
+      "Integrated an ESP32, camera, OLED screen and motor drivers to enable real-time interaction and response",
+      "Built a web interface for user interaction and connected it to the robot's behavior system",
+    ],
+    results: [
+      "Delivered a working expressive robot prototype within the hackathon timeline",
+      "Demonstrated autonomous motion and responsive interaction through integrated vision and embedded systems",
+    ],
+    mediaPlaceholders: 4,
+    media: [
+      {
+        kind: "image",
+        sources: [
+          "https://drive.google.com/uc?export=view&id=1Z6vIqb7dXcoF_ZxFsSxqfpc29NzEVQyj",
+          "https://drive.google.com/thumbnail?id=1Z6vIqb7dXcoF_ZxFsSxqfpc29NzEVQyj&sz=w1600",
+        ],
+        alt: "ReLumi LinkedIn post screenshot",
+      },
+      {
+        kind: "video",
+        embedUrl: "https://drive.google.com/file/d/1MfiwP7IFOwdqn4eH0z_MNPZ_1aVXYnr4/preview",
+        alt: "ReLumi project demo video",
+      },
+      {
+        kind: "image",
+        sources: [
+          "https://drive.google.com/uc?export=view&id=1IFt65HwY9ZMYIREJ_9OmXtCTbhzv9Ywm",
+          "https://drive.google.com/thumbnail?id=1IFt65HwY9ZMYIREJ_9OmXtCTbhzv9Ywm&sz=w1600",
+        ],
+        alt: "ReLumi resume bullet points",
+      },
+      {
+        kind: "image",
+        sources: [
+          "https://drive.google.com/uc?export=view&id=1OhdgG-Qqzagw5E4GlVZX2mrP78si5y0U",
+          "https://drive.google.com/thumbnail?id=1OhdgG-Qqzagw5E4GlVZX2mrP78si5y0U&sz=w1600",
+        ],
+        alt: "ReLumi project image",
+      },
+    ],
+  },
+  {
     id: "robotic-arm",
     title: "5 DOF Robotic Arm",
     category: "Mechanical Design & Robotics",
@@ -83,56 +133,6 @@ const projects: Project[] = [
         ],
         kind: "image",
         alt: "5 DOF robotic arm CAD side view",
-      },
-    ],
-  },
-  {
-    id: "relumi-expressive-robot",
-    title: "ReLumi Expressive Robot",
-    category: "ESP32, Embedded Systems (MakeUOFT Hackathon)",
-    what: [
-      "Build an autonomous robotic companion that translates user and vision inputs into expressive motion and behavior",
-      "Develop a complete embedded interaction system during the 24 hour MakeUOFT hackathon",
-    ],
-    how: [
-      "Coordinated vision inputs with control logic to trigger Gemini API responses and drive autonomous behavior",
-      "Integrated an ESP32, camera, OLED screen and motor drivers to enable real-time interaction and response",
-      "Built a web interface for user interaction and connected it to the robot's behavior system",
-    ],
-    results: [
-      "Delivered a working expressive robot prototype within the hackathon timeline",
-      "Demonstrated autonomous motion and responsive interaction through integrated vision and embedded systems",
-    ],
-    mediaPlaceholders: 4,
-    media: [
-      {
-        kind: "image",
-        sources: [
-          "https://drive.google.com/uc?export=view&id=1Z6vIqb7dXcoF_ZxFsSxqfpc29NzEVQyj",
-          "https://drive.google.com/thumbnail?id=1Z6vIqb7dXcoF_ZxFsSxqfpc29NzEVQyj&sz=w1600",
-        ],
-        alt: "ReLumi LinkedIn post screenshot",
-      },
-      {
-        kind: "video",
-        embedUrl: "https://drive.google.com/file/d/1MfiwP7IFOwdqn4eH0z_MNPZ_1aVXYnr4/preview",
-        alt: "ReLumi project demo video",
-      },
-      {
-        kind: "image",
-        sources: [
-          "https://drive.google.com/uc?export=view&id=1IFt65HwY9ZMYIREJ_9OmXtCTbhzv9Ywm",
-          "https://drive.google.com/thumbnail?id=1IFt65HwY9ZMYIREJ_9OmXtCTbhzv9Ywm&sz=w1600",
-        ],
-        alt: "ReLumi resume bullet points",
-      },
-      {
-        kind: "image",
-        sources: [
-          "https://drive.google.com/uc?export=view&id=1OhdgG-Qqzagw5E4GlVZX2mrP78si5y0U",
-          "https://drive.google.com/thumbnail?id=1OhdgG-Qqzagw5E4GlVZX2mrP78si5y0U&sz=w1600",
-        ],
-        alt: "ReLumi project image",
       },
     ],
   },
