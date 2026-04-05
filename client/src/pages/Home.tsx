@@ -92,7 +92,7 @@ const projects: Project[] = [
     category: "ESP32, Embedded Systems (MakeUOFT Hackathon)",
     what: [
       "Build an autonomous robotic companion that translates user and vision inputs into expressive motion and behavior",
-      "Develop a complete embedded interaction system during the MakeUOFT hackathon",
+      "Develop a complete embedded interaction system during the 24 hour MakeUOFT hackathon",
     ],
     how: [
       "Coordinated vision inputs with control logic to trigger Gemini API responses and drive autonomous behavior",
@@ -101,7 +101,7 @@ const projects: Project[] = [
     ],
     results: [
       "Delivered a working expressive robot prototype within the hackathon timeline",
-      "Demonstrated autonomous motion and responsive interaction through integrated vision, control and embedded systems",
+      "Demonstrated autonomous motion and responsive interaction through integrated vision and embedded systems",
     ],
     mediaPlaceholders: 4,
     media: [
