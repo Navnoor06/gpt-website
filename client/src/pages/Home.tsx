@@ -87,6 +87,56 @@ const projects: Project[] = [
     ],
   },
   {
+    id: "relumi-expressive-robot",
+    title: "ReLumi Expressive Robot",
+    category: "ESP32, Embedded Systems (MakeUOFT Hackathon)",
+    what: [
+      "Build a WiFi-enabled robotic companion that responds to user actions with expressive motion and behavior",
+      "Create a real-time interactive system in a 24-hour hackathon environment",
+    ],
+    how: [
+      "Integrated ESP32, camera, motors and OLED for real-time interaction and feedback",
+      "Coordinated vision inputs with embedded control to drive responsive motion and behavior",
+      "Implemented a web interface and AI-assisted interaction flow for expressive robot responses",
+    ],
+    results: [
+      "Delivered a functional expressive robot prototype within the hackathon timeline",
+      "Demonstrated responsive motion and interaction through combined embedded and vision systems",
+    ],
+    mediaPlaceholders: 4,
+    media: [
+      {
+        kind: "image",
+        sources: [
+          "https://drive.google.com/uc?export=view&id=1Z6vIqb7dXcoF_ZxFsSxqfpc29NzEVQyj",
+          "https://drive.google.com/thumbnail?id=1Z6vIqb7dXcoF_ZxFsSxqfpc29NzEVQyj&sz=w1600",
+        ],
+        alt: "ReLumi LinkedIn post screenshot",
+      },
+      {
+        kind: "image",
+        sources: [
+          "https://drive.google.com/uc?export=view&id=1IFt65HwY9ZMYIREJ_9OmXtCTbhzv9Ywm",
+          "https://drive.google.com/thumbnail?id=1IFt65HwY9ZMYIREJ_9OmXtCTbhzv9Ywm&sz=w1600",
+        ],
+        alt: "ReLumi resume bullet points",
+      },
+      {
+        kind: "image",
+        sources: [
+          "https://drive.google.com/uc?export=view&id=1OhdgG-Qqzagw5E4GlVZX2mrP78si5y0U",
+          "https://drive.google.com/thumbnail?id=1OhdgG-Qqzagw5E4GlVZX2mrP78si5y0U&sz=w1600",
+        ],
+        alt: "ReLumi project image",
+      },
+      {
+        kind: "video",
+        embedUrl: "https://drive.google.com/file/d/1MfiwP7IFOwdqn4eH0z_MNPZ_1aVXYnr4/preview",
+        alt: "ReLumi project demo video",
+      },
+    ],
+  },
+  {
     id: "compressed-air-engine",
     title: "Compressed Air Engine",
     category: "Precision Manufacturing & Mechanical Assembly",
