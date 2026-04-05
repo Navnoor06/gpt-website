@@ -114,6 +114,11 @@ const projects: Project[] = [
         alt: "ReLumi LinkedIn post screenshot",
       },
       {
+        kind: "video",
+        embedUrl: "https://drive.google.com/file/d/1MfiwP7IFOwdqn4eH0z_MNPZ_1aVXYnr4/preview",
+        alt: "ReLumi project demo video",
+      },
+      {
         kind: "image",
         sources: [
           "https://drive.google.com/uc?export=view&id=1IFt65HwY9ZMYIREJ_9OmXtCTbhzv9Ywm",
@@ -128,11 +133,6 @@ const projects: Project[] = [
           "https://drive.google.com/thumbnail?id=1OhdgG-Qqzagw5E4GlVZX2mrP78si5y0U&sz=w1600",
         ],
         alt: "ReLumi project image",
-      },
-      {
-        kind: "video",
-        embedUrl: "https://drive.google.com/file/d/1MfiwP7IFOwdqn4eH0z_MNPZ_1aVXYnr4/preview",
-        alt: "ReLumi project demo video",
       },
     ],
   },
@@ -433,7 +433,7 @@ const navItems = [
 ];
 
 export default function Home() {
-  const [expanded, setExpanded] = useState<string | null>(projects[0].id);
+  const [expanded, setExpanded] = useState<string | null>(null);
   const [copiedEmail, setCopiedEmail] = useState(false);
   const year = useMemo(() => new Date().getFullYear(), []);
 
