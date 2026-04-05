@@ -462,7 +462,7 @@ export default function Home() {
           <div className="grid gap-8 md:grid-cols-[minmax(0,1fr)_300px] items-start">
             <div>
               <p className="text-sm uppercase tracking-[0.2em] text-accent mb-4">Mechanical Engineering • University of Toronto</p>
-              <h1 className="font-heading text-4xl sm:text-5xl lg:text-5xl xl:text-6xl font-semibold leading-tight sm:whitespace-nowrap">
+              <h1 className="font-heading text-[clamp(2.3rem,4.5vw,4rem)] font-semibold leading-tight sm:whitespace-nowrap">
                 Aspiring Robotics Engineer
               </h1>
               <p className="mt-6 text-base sm:text-lg max-w-3xl text-primary/80">
