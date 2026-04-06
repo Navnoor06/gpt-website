@@ -24,17 +24,17 @@ const projects: Project[] = [
     title: "ReLumi Expressive Robot",
     category: "ESP32, Embedded Systems (MakeUOFT Hackathon)",
     what: [
-      "Build an autonomous robotic companion that translates user and vision inputs into expressive motion and behavior",
-      "Develop a complete embedded interaction system during the 24 hour MakeUOFT hackathon",
+      "Build an autonomous robotic companion that translates user and vision inputs into expressive behavior and facial expressions",
+      "Enable real-time user interaction and direct control through an ESP32-hosted web interface",
     ],
     how: [
       "Coordinated vision inputs with control logic to trigger Gemini API responses and drive autonomous behavior",
-      "Integrated an ESP32, camera, OLED screen and motor drivers to enable real-time interaction and response",
-      "Built a web interface for user interaction and connected it to the robot's behavior system",
+      "Integrated an ESP32, camera, OLED screen and motor drivers, powering the motors from a 5V battery pack",
+      "Hosted a web interface on the ESP32 for user interaction and direct control of the robot's behavior system",
     ],
     results: [
-      "Delivered a working expressive robot prototype within the hackathon timeline",
-      "Demonstrated autonomous motion and responsive interaction through integrated vision and embedded systems",
+      "Delivered a working expressive robot prototype within the 24 hour MakeUOFT hackathon timeline",
+      "Demonstrated reliable motion control and responsive interaction through integrated vision and embedded systems",
     ],
     mediaPlaceholders: 4,
     media: [
@@ -593,7 +593,7 @@ export default function Home() {
             >
               <Linkedin size={16} /> LinkedIn
             </a>
-            <a className="inline-flex items-center gap-2 rounded-md border border-primary/20 px-4 py-2 hover:border-accent hover:text-accent" href="https://drive.google.com/file/d/18j2fI-wrRnCdTkO4rpp8wI4ZYSFF3QzV/view?usp=sharing" target="_blank" rel="noreferrer">
+            <a className="inline-flex items-center gap-2 rounded-md border border-primary/20 px-4 py-2 hover:border-accent hover:text-accent" href="https://drive.google.com/file/d/1YJ2CUNRB3qVmoNQrj-cMYT0Lrimqxt5g/view?usp=sharing" target="_blank" rel="noreferrer">
               <Download size={16} /> Resume
             </a>
             <a className="inline-flex items-center gap-2 rounded-md border border-primary/20 px-4 py-2 hover:border-accent hover:text-accent" href="#projects">
