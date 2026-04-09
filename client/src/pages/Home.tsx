@@ -20,6 +20,56 @@ type Project = {
 
 const projects: Project[] = [
   {
+    id: "relumi-expressive-robot",
+    title: "ReLumi Expressive Robot",
+    category: "ESP32, Embedded Systems (MakeUOFT Hackathon)",
+    what: [
+      "Build an autonomous robotic companion that translates user and vision inputs into expressive behavior and facial expressions",
+      "Enable real-time user interaction and direct control through an ESP32-hosted web interface",
+    ],
+    how: [
+      "Coordinated vision inputs with control logic to trigger Gemini API responses and drive autonomous behavior",
+      "Integrated an ESP32, camera, OLED screen and motor drivers, powering the motors from a 5V battery pack",
+      "Hosted a web interface on the ESP32 for user interaction and direct control of the robot's behavior system",
+    ],
+    results: [
+      "Delivered a working expressive robot prototype within the 24 hour MakeUOFT hackathon timeline",
+      "Demonstrated reliable motion control and responsive interaction through integrated vision and embedded systems",
+    ],
+    mediaPlaceholders: 4,
+    media: [
+      {
+        kind: "image",
+        sources: [
+          "https://drive.google.com/uc?export=view&id=1Z6vIqb7dXcoF_ZxFsSxqfpc29NzEVQyj",
+          "https://drive.google.com/thumbnail?id=1Z6vIqb7dXcoF_ZxFsSxqfpc29NzEVQyj&sz=w1600",
+        ],
+        alt: "ReLumi LinkedIn post screenshot",
+      },
+      {
+        kind: "video",
+        embedUrl: "https://drive.google.com/file/d/1MfiwP7IFOwdqn4eH0z_MNPZ_1aVXYnr4/preview",
+        alt: "ReLumi project demo video",
+      },
+      {
+        kind: "image",
+        sources: [
+          "https://drive.google.com/uc?export=view&id=1IFt65HwY9ZMYIREJ_9OmXtCTbhzv9Ywm",
+          "https://drive.google.com/thumbnail?id=1IFt65HwY9ZMYIREJ_9OmXtCTbhzv9Ywm&sz=w1600",
+        ],
+        alt: "ReLumi resume bullet points",
+      },
+      {
+        kind: "image",
+        sources: [
+          "https://drive.google.com/uc?export=view&id=1OhdgG-Qqzagw5E4GlVZX2mrP78si5y0U",
+          "https://drive.google.com/thumbnail?id=1OhdgG-Qqzagw5E4GlVZX2mrP78si5y0U&sz=w1600",
+        ],
+        alt: "ReLumi project image",
+      },
+    ],
+  },
+  {
     id: "robotic-arm",
     title: "5 DOF Robotic Arm",
     category: "Mechanical Design & Robotics",
@@ -83,6 +133,56 @@ const projects: Project[] = [
         ],
         kind: "image",
         alt: "5 DOF robotic arm CAD side view",
+      },
+    ],
+  },
+  {
+    id: "compressed-air-engine",
+    title: "Compressed Air Engine",
+    category: "Precision Manufacturing & Mechanical Assembly",
+    what: [
+      "Machine and build a functional compressed air engine from technical drawings",
+      "Maintain dimensional tolerances to ensure proper fit and motion of rotating components",
+    ],
+    how: [
+      "Manufactured precise components using a lathe, mill and drill press while following technical drawings and tolerances",
+      "Assembled a functional compressed air engine, ensuring proper fit, alignment and sealing between moving components",
+      "Iteratively adjusted dimensions to improve rotational motion and mechanical efficiency",
+    ],
+    results: [
+      "Built a functional compressed air engine with smooth rotational operation",
+      "Improved mechanical efficiency through iterative machining and assembly refinements",
+    ],
+    mediaPlaceholders: 4,
+    media: [
+      {
+        kind: "image",
+        sources: [
+          "https://drive.google.com/uc?export=view&id=1Yw3-U6i6P0bKPMYIMny4gMMcX83SaEv3",
+          "https://drive.google.com/thumbnail?id=1Yw3-U6i6P0bKPMYIMny4gMMcX83SaEv3&sz=w1600",
+        ],
+        alt: "Compressed air engine component fabrication",
+      },
+      {
+        kind: "image",
+        sources: [
+          "https://drive.google.com/uc?export=view&id=1QDzWqmweixE10iRJXQCtvvhSUKtZKWrk",
+          "https://drive.google.com/thumbnail?id=1QDzWqmweixE10iRJXQCtvvhSUKtZKWrk&sz=w1600",
+        ],
+        alt: "Compressed air engine assembly process",
+      },
+      {
+        kind: "image",
+        sources: [
+          "https://drive.google.com/uc?export=view&id=1-0sZ_XF7fV0D-VLzPmc5VM127N_k4LRn",
+          "https://drive.google.com/thumbnail?id=1-0sZ_XF7fV0D-VLzPmc5VM127N_k4LRn&sz=w1600",
+        ],
+        alt: "Completed compressed air engine",
+      },
+      {
+        kind: "video",
+        embedUrl: "https://drive.google.com/file/d/1uppkNyYcHzZLKaxiwhbgGazLGthFAuEg/preview",
+        alt: "Compressed air engine operation demo",
       },
     ],
   },
@@ -333,7 +433,7 @@ const navItems = [
 ];
 
 export default function Home() {
-  const [expanded, setExpanded] = useState<string | null>(projects[0].id);
+  const [expanded, setExpanded] = useState<string | null>(null);
   const [copiedEmail, setCopiedEmail] = useState(false);
   const year = useMemo(() => new Date().getFullYear(), []);
 
@@ -359,13 +459,22 @@ export default function Home() {
 
       <main id="home" className="mx-auto max-w-6xl px-4 sm:px-6">
         <section className="py-20 sm:py-28">
-          <p className="text-sm uppercase tracking-[0.2em] text-accent mb-4">Mechanical Engineering • University of Toronto</p>
-          <h1 className="font-heading text-4xl sm:text-6xl font-semibold leading-tight max-w-4xl">
-            Aspiring Robotics Engineer
-          </h1>
-          <p className="mt-6 text-base sm:text-lg max-w-3xl text-primary/80">
-            Welcome to my portfolio. I design and prototype integrated hardware systems that combine mechanical design, electronics, and embedded control, with projects ranging from robotic arms and custom PCBs to microcontroller-based devices.
-          </p>
+          <div className="grid gap-8 md:grid-cols-[minmax(0,1fr)_300px] items-start">
+            <div>
+              <p className="text-sm uppercase tracking-[0.2em] text-accent mb-4">Mechanical Engineering • University of Toronto</p>
+              <h1 className="font-heading text-[clamp(2rem,3.4vw,3.2rem)] font-semibold leading-tight sm:whitespace-nowrap">
+                Aspiring Robotics Engineer
+              </h1>
+              <p className="mt-6 text-base sm:text-lg max-w-3xl text-primary/80">
+                Welcome to my portfolio. I design and prototype integrated hardware systems that combine mechanical design, electronics, and embedded control, with projects ranging from robotic arms and custom PCBs to microcontroller-based devices.
+              </p>
+            </div>
+            <img
+              src="https://drive.google.com/thumbnail?id=1qnxaQBslWYgDPlkuPz5zkwRWETjLl4hj&sz=w1000"
+              alt="Portrait of Navnoor Mann"
+              className="w-full max-w-[300px] justify-self-center rounded-2xl border border-primary/15 bg-primary/5 object-cover aspect-square"
+            />
+          </div>
         </section>
 
         <section id="projects" className="py-12 scroll-mt-24">
@@ -484,7 +593,7 @@ export default function Home() {
             >
               <Linkedin size={16} /> LinkedIn
             </a>
-            <a className="inline-flex items-center gap-2 rounded-md border border-primary/20 px-4 py-2 hover:border-accent hover:text-accent" href="https://drive.google.com/file/d/1FkRRHT9ua9YwYV7k-0KazUfKQRhTzHPa/view?usp=sharing" target="_blank" rel="noreferrer">
+            <a className="inline-flex items-center gap-2 rounded-md border border-primary/20 px-4 py-2 hover:border-accent hover:text-accent" href="https://drive.google.com/file/d/1YJ2CUNRB3qVmoNQrj-cMYT0Lrimqxt5g/view?usp=sharing" target="_blank" rel="noreferrer">
               <Download size={16} /> Resume
             </a>
             <a className="inline-flex items-center gap-2 rounded-md border border-primary/20 px-4 py-2 hover:border-accent hover:text-accent" href="#projects">
